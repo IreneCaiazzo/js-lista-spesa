@@ -29,3 +29,24 @@ while (i < arrList. lenght){
     i++;
 }
 
+const btnAdd = document.querySelector('#btn-add');
+const inputAdd = document.querySelector('#input-add');
+
+btnAdd.addEventListener('click',
+	function () {
+		// prendere il valore dall'input
+		const addText = inputAdd.value.trim().toLowerCase();
+
+		if (addText != '') {
+			// console.log di addText
+			console.log(addText);
+			// pusharlo nell'array
+			arrList.push(addText);
+			console.log(arrList);
+			// stampare il valore in pagina
+			eleList.innerHTML += `<li>${addText}</li>`;
+		}
+
+		inputAdd.value = '';
+	}
+)
